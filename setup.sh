@@ -31,13 +31,14 @@ if [ "$1" = "install" ];then
         exit
     fi
 	ln -s $PWD/nvim ~/.config/nvim
-    $NVIMBIN -es -u vimrc -i NONE -c "PlugInstall" -c "qa"
+    $NVIMBIN -es -u $PWD/nvim/init.vim -i NONE -c "PlugInstall" -c "qa"
     #$(installYouCompleteMe)
     echo "Setup Done"
 fi
 
 if [ "$1" = "uninstall" ];then
     rm ~/.config/nvim
+    rm $NVIMBIN
     echo "Delete .vim Symbolic link"
 fi
 
