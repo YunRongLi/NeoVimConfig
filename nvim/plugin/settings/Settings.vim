@@ -12,11 +12,7 @@ filetype indent on
 " like <leader>w saves the current file
 let mapleader = ","
 
-
-
 set autoread
-
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -98,7 +94,8 @@ set splitbelow
 
 set viminfo=
 set copyindent
-
+set clipboard=unnamed
+set mouse=a
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
