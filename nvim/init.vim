@@ -12,7 +12,8 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'vim-scripts/L9'
     Plug 'vim-scripts/FuzzyFinder'
     Plug 'sheerun/vim-polyglot'
-    " Plug 'nvim-treesitter/nvim-treesitter' 
+    Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': ['go'] }
+    "Plug 'nvim-treesitter/nvim-treesitter'" 
     
     " Color Schemes"
     Plug 'sainnhe/gruvbox-material'
