@@ -18,7 +18,7 @@ function downloadNeoVim() {
 if [ "$1" = "install" ];then
     if [[ "$OSTYPE" == "linux-gnu"* ]];then
         if [ ! -f $PWD/nvim.appimage ];then
-            $(downloadNeoVim) && chmox +x $PWD/nvim.appimage && \
+            $(downloadNeoVim) && chmod +x $PWD/nvim.appimage && \
                 mkdir $PWD/bin && ln -s $PWD/nvim.appimage $PWD/bin/nvim && \
                 $(echo "export $NVIMPATH" >> ~/.bashrc)
             source ~/.bashrc
