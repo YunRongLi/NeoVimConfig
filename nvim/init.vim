@@ -12,9 +12,17 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'vim-scripts/L9'
     Plug 'vim-scripts/FuzzyFinder'
     Plug 'sheerun/vim-polyglot'
-    Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': ['go'] }
-    "Plug 'nvim-treesitter/nvim-treesitter'" 
-    
+    Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries', 'for': ['go'] }
+	Plug 'ntpeters/vim-better-whitespace'
+	"Plug 'nvim-treesitter/nvim-treesitter'" 
+
+    if has('nvim')
+        Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
+    else
+        Plug 'Shougo/deoplete.nvim'
+        Plug 'roxma/nvim-yarp'
+        Plug 'roxma/vim-hug-neovim-rpc'
+	endif
     " Color Schemes"
     Plug 'sainnhe/gruvbox-material'
 
